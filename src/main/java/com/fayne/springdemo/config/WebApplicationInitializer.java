@@ -37,6 +37,6 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
 
     @Override
     protected Filter[] getServletFilters() {
-        return new Filter[]{new CharacterEncodingFilter("UTF-8",true)};
+        return new Filter[]{new CharacterEncodingFilter("UTF-8")};
     }
 }
