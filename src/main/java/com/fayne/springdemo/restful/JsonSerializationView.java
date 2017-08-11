@@ -2,9 +2,7 @@ package com.fayne.springdemo.restful;
 
 import com.fayne.springdemo.restful.domain.Person;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by fayne on 2017/8/9
@@ -22,5 +20,13 @@ public class JsonSerializationView {
         return new Person("fayne",28);
     }
 
-
+    /**
+     *   http://localhost:7777/json/serialization
+     *    { "name": "fayne", "age": 28 }
+     *    @return
+     */
+    @PostMapping(value = "/serialization",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Person postPerson(@RequestBody Person person){
+        return person;
+    }
 }
