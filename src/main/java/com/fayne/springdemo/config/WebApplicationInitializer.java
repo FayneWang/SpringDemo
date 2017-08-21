@@ -3,7 +3,6 @@ package com.fayne.springdemo.config;
 
 
 import org.springframework.web.filter.CharacterEncodingFilter;
-import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
@@ -28,6 +27,7 @@ public class WebApplicationInitializer extends AbstractAnnotationConfigDispatche
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         super.onStartup(servletContext);
+
     }
 
     @Override

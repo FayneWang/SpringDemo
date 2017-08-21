@@ -1,4 +1,4 @@
-package com.fayne.springdemo.restful;
+package com.fayne.springdemo.restful.WebDataBinder;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.MediaType;
