@@ -53,12 +53,12 @@
                 <version>9.4.6.v20170531</version>
                 <configuration>
                     <httpConnector>
-                        <port>7777</port>
+                        <port>12345</port>
                         <name>spring-demo</name>
                     </httpConnector>
                     <scanIntervalSeconds>180</scanIntervalSeconds>
                     <reload>automatic</reload>
-                    <stopPort>7776</stopPort>
+                    <stopPort>12333</stopPort>
                     <stopKey>SpringDemo</stopKey>
                 </configuration>
             </plugin>

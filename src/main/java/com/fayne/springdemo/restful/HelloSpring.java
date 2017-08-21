@@ -1,9 +1,7 @@
 package com.fayne.springdemo.restful;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by fayne on 2017/8/8
@@ -13,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloSpring {
 
     @GetMapping
-    public String responseHello(@RequestHeader("content-type") String contentType){
-        return "Hello Spring!";
+    public String responseHello(@RequestHeader("content-type") String contentType,@ModelAttribute("modeAttr") long value,Model model){
+        return "Hello Spring!" + value;
     }
 }
