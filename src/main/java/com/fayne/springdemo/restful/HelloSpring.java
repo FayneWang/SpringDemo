@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by fayne on 2017/8/8
  */
 @RestController
-@RequestMapping("/hello")
+@RequestMapping("hello")
 public class HelloSpring {
 
     @GetMapping
