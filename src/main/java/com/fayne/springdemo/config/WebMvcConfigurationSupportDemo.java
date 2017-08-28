@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.validation.MessageCodesResolver;
 import org.springframework.validation.Validator;
@@ -28,7 +29,7 @@ import java.util.Map;
  * Created by fayne on 2017/8/11
  */
 @Configuration
-@ComponentScan({"com.fayne.springdemo.restful"})
+@ComponentScan({"com.fayne.springdemo.restful","com.fayne.springdemo.mvctest"})
 public class WebMvcConfigurationSupportDemo extends WebMvcConfigurationSupport {
 
 //    /**
