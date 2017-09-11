@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration monitorInterval="5">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!--
+        <RollingFile name="RollingFile" fileName="logs/app.log" filePattern="logs/app-%d{MM-dd-yyyy}.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{DEFAULT} %p %c{.} [%t] %equals{%m}{==}{ equalse }%n</Pattern>
+            </PatternLayout>
+            <TimeBasedTriggeringPolicy />
+        </RollingFile> -->
+
+        <RollingFile compressionLevel="9" fileIndex="min" min="2" max="5">
+            <name>rollingFile</name>
+            <fileName>logs/rolling_time.log</fileName>
+            <filePattern>logs/%d{MM-dd-yyy}.log.gz</filePattern>
+            <immediateFlush>true</immediateFlush>
+            <PatternLayout>
+                <Pattern>%d{DEFAULT} %p %c{1.} [%T] %equalsIgnoreCase{%m}{A==a23}{A equals a}%n</Pattern>
+            </PatternLayout>
+            <SizeBasedTriggeringPolicy size="1KB" />
+        </RollingFile>
+
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="rollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
